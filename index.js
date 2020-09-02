@@ -12,7 +12,7 @@ function ensureProperOptions(algorithm, key) {
   }
 
   if (algorithm === 'aes256' && key.length !== 32) {
-    const errorLabel = `A 32-bits key must be used with aes256. Given: ${key.length} (${key}-bits)`
+    const errorLabel = `A 32-byte (256 bits) key must be used with aes256. Given: ${key.length} (${key}-bytes)`
     throw new Error(errorLabel)
   }
 }
